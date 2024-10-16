@@ -1,12 +1,12 @@
 # ArConvNet
 
 ## Loading pretrained model
-you can load ArConvNet-B0 model using the code blow:
+You can load the ArConvNet-B0 model using the code below:
 ```
 from tensorflow.keras.models import load_model
 model = load_model('ClassModelV7-0.h5')
 ```
-and continue doing whatever you want to do.
+After loading the model, you can continue with whatever tasks you want to perform.
 
 ## ArConv Layer
 ### PyTorch version
@@ -28,3 +28,6 @@ iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
             )(iin)
             dfm=tf.keras.Model(iin, iout, name=prefix + "depthwise-model")
 ```
+
+# Retinal Diesease Classification
+You can load ClassModelV7-0 using Keras to classify 224x224 retinal images into normal and diseased classes.
