@@ -31,3 +31,17 @@ iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
 
 # Retinal Diesease Classification
 You can load ClassModelV7-0 using Keras to classify normalized 224x224 retinal images into normal and diseased classes.
+```
+confusion matrix
+[[104  30]
+ [ 13 493]]
+classification report
+              precision    recall  f1-score   support
+
+           0       0.89      0.78      0.83       134
+           1       0.94      0.97      0.96       506
+
+    accuracy                           0.93       640
+   macro avg       0.92      0.88      0.89       640
+weighted avg       0.93      0.93      0.93       640
+```
