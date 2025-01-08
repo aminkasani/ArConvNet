@@ -2,7 +2,7 @@
 
 ## Loading pretrained model
 You can load the ArConvNet-B0 model using the code below:
-```
+```python
 from tensorflow.keras.models import load_model
 model = load_model('ClassModelV7-0.h5')
 ```
@@ -10,7 +10,7 @@ After loading the model, you can continue with whatever tasks you want to perfor
 
 ## ArConv Layer
 ### PyTorch version
-```
+```python
 class ArConvLayer(nn.Module):
     def __init__(self, in_channels, ksize, stride):
         super(CustomDepthwiseConvLayer, self).__init__()
@@ -43,7 +43,7 @@ class ArConvLayer(nn.Module):
 ```
 ### Tensorflow
 #### Keras
-```
+```python
 from keras import backend
 
 iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
