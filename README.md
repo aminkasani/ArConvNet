@@ -27,6 +27,10 @@ iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
                 # kernel_regularizer='l1'
             )(iin)
             dfm=tf.keras.Model(iin, iout, name=prefix + "depthwise-model")
+x=dfm.call(x)
+x = tf.keras.layers.Permute(dims=(2,1,3))(x)
+x=dfm.call(x)
+x = tf.keras.layers.Permute(dims=(2,1,3))(x)
 ```
 
 # Retinal Diesease Classification
