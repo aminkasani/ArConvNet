@@ -79,3 +79,20 @@ classification report
    macro avg       0.92      0.88      0.89       640
 weighted avg       0.93      0.93      0.93       640
 ```
+
+## Citation
+
+Please cite the following if you use this repository in your research:
+
+Paper: Detection of retinal diseases using an accelerated reused convolutional network ([https://doi.org/10.1234/your-paper-doi](https://doi.org/10.1016/j.compbiomed.2024.109466))
+```bibtex
+@article{kasani2025detection,
+  title={Detection of retinal diseases using an accelerated reused convolutional network},
+  author={Kasani, Amin Ahmadi and Sajedi, Hedieh},
+  journal={Computers in Biology and Medicine},
+  volume={184},
+  pages={109466},
+  year={2025},
+  publisher={Elsevier}
+}
+```
