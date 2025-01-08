@@ -84,7 +84,7 @@ weighted avg       0.93      0.93      0.93       640
 
 Please cite the following if you use this repository in your research:
 
-Paper: Detection of retinal diseases using an accelerated reused convolutional network ([https://doi.org/10.1234/your-paper-doi](https://doi.org/10.1016/j.compbiomed.2024.109466))
+Paper: Detection of retinal diseases using an accelerated reused convolutional network (https://doi.org/10.1016/j.compbiomed.2024.109466)
 ```bibtex
 @article{kasani2025detection,
   title={Detection of retinal diseases using an accelerated reused convolutional network},
