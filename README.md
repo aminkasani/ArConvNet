@@ -11,6 +11,8 @@ After loading the model, you can continue with whatever tasks you want to perfor
 ## ArConv Layer
 ### PyTorch version
 ```python
+import torch.nn as nn
+
 class ArConvLayer(nn.Module):
     def __init__(self, in_channels, ksize, stride):
         super(CustomDepthwiseConvLayer, self).__init__()
@@ -45,7 +47,7 @@ class ArConvLayer(nn.Module):
 #### Keras
 ```python
 from keras import backend
-
+import tensorflow as tf
 iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
             iout = tf.keras.layers.DepthwiseConv2D(
                 kernel_size=(1,ksize),
