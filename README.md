@@ -46,8 +46,8 @@ class ArConvLayer(nn.Module):
 ### Tensorflow
 #### Keras
 ```python
-from keras import backend
 import tensorflow as tf
+
 iin = tf.keras.layers.Input(shape=backend.int_shape(x)[1:])
             iout = tf.keras.layers.DepthwiseConv2D(
                 kernel_size=(1,ksize),
