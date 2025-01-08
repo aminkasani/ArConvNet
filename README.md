@@ -10,7 +10,37 @@ After loading the model, you can continue with whatever tasks you want to perfor
 
 ## ArConv Layer
 ### PyTorch version
-pending...
+```
+class ArConvLayer(nn.Module):
+    def __init__(self, in_channels, ksize, stride):
+        super(CustomDepthwiseConvLayer, self).__init__()
+        
+        # Depthwise convolution
+        self.depthwise_conv = nn.Conv2d(
+            in_channels=in_channels,
+            out_channels=in_channels,  # Depthwise keeps the same number of channels
+            kernel_size=(1, ksize),
+            stride=stride,
+            padding=(0, ksize // 2),  # Same padding
+            groups=in_channels,       # Depthwise convolution
+            bias=False                # No bias (use_bias=False in Keras)
+        )
+
+    def forward(self, x):
+        # First depthwise convolution
+        x = self.depthwise_conv(x)
+        
+        # Permute dimensions (similar to tf.keras.layers.Permute(dims=(2, 1, 3)))
+        x = x.permute(0, 2, 1, 3)
+        
+        # Apply depthwise convolution again
+        x = self.depthwise_conv(x)
+        
+        # Permute back to original dimensions
+        x = x.permute(0, 2, 1, 3)
+        
+        return x
+```
 ### Tensorflow
 #### Keras
 ```
