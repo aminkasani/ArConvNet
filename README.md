@@ -15,7 +15,7 @@ import torch.nn as nn
 
 class ArConvLayer(nn.Module):
     def __init__(self, in_channels, ksize, stride):
-        super(CustomDepthwiseConvLayer, self).__init__()
+        super(ArConvLayer, self).__init__()
         
         # Depthwise convolution
         self.depthwise_conv = nn.Conv2d(
