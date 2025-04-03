@@ -33,13 +33,13 @@ class ArConvLayer(nn.Module):
         x = self.depthwise_conv(x)
         
         # Permute dimensions (similar to tf.keras.layers.Permute(dims=(2, 1, 3)))
-        x = x.permute(0, 2, 1, 3)
+        x = x.permute(0, 1, 3, 2)
         
         # Apply depthwise convolution again
         x = self.depthwise_conv(x)
         
         # Permute back to original dimensions
-        x = x.permute(0, 2, 1, 3)
+        x = x.permute(0, 1, 3, 2)
         
         return x
 ```
